@@ -13,5 +13,5 @@ const calculateValue = () => {
   let input_1 = Number(number_input.value);
   let input_2 = Number(number_input1.value);
   const new_value = input_1 / input_2;
-  tip_amount.textContent = new_value.toFixed(2);
+  tip_amount.textContent = ` $${new_value.toFixed(2)}`
 };
