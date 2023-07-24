@@ -4,6 +4,7 @@ const percent_val = document.querySelectorAll(".percent-button");
 const tip_amount = document.querySelector(".tip_amount");
 const total = document.querySelector(".total");
 const resetbtn = document.querySelector(".reset_btn");
+const text_value = document.querySelector(".text_value");
 
 // user input
 number_input.addEventListener("input", () => calculateValue());
