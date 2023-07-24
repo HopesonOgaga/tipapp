@@ -26,18 +26,35 @@ const calculateValue_add = () => {
 
   return add_value;
 };
-
-// loop through  button
-// tip percentage code
+// custom
+// function custom() {
+//   const text_value = document.querySelector(".text_value").value;
+//   const new_val = Number(text_value);
+//   // divide value
+//   const mul_custom = calculateValue_add() * new_val;
+// }
+text_value.addEventListener("input", function () {
+  const text_value = document.querySelector(".text_value").value;
+  let new_val = Number(text_value);
+  // divide value
+  const mul_custom = calculateValue() * new_val;
+  total.textContent = Number(mul_custom).toFixed(2);
+  // multiply tip
+  const add_custom = calculateValue_add() + new_val;
+  tip_amount.textContent = Number(add_custom).toFixed(2);
+  console.log(mul_custom);
+  console.log(add_custom);
+});
+// loop
 
 for (let i = 0; i < percent_val.length; i++) {
   percent_val[i].addEventListener("click", function () {
     let new_percent_value =
-      Number(percent_val[i].value / 100) * calculateValue();
+      Number(percent_val[i].value ) * calculateValue();
     console.log(new_percent_value);
 
     let add_percwent =
-      Number(percent_val[i].value / 100) + calculateValue_add();
+      Number(percent_val[i].value ) + calculateValue_add();
     console.log(add_percwent);
     total.textContent = `$${add_percwent.toFixed(2)}`;
     tip_amount.textContent = `$${new_percent_value.toFixed(2)}`;
