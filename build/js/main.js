@@ -38,10 +38,10 @@ text_value.addEventListener("input", function () {
   let new_val = Number(text_value);
   // divide value
   const mul_custom = calculateValue() * new_val;
-  total.textContent = Number(mul_custom).toFixed(2);
+  total.textContent = `$${Number(mul_custom).toFixed(2)}`;
   // multiply tip
   const add_custom = calculateValue_add() + new_val;
-  tip_amount.textContent = Number(add_custom).toFixed(2);
+  tip_amount.textContent = `$${Number(add_custom).toFixed(2)}`;
   console.log(mul_custom);
   console.log(add_custom);
 });
